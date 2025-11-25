@@ -3,16 +3,34 @@ border: 2px solid black;
 border-collapse: collapse;                                                            
 color: maroon;                                                                        
 padding: 8px                                                                          
-}                                                                                        
+}  
+
+h1, h2, h3 {
+    font-family: 'Halvertica', sans-serif;
+    font-size: 50px;
+    color: rgb(119, 0, 255);
+}                                                                                      
 body {                                                                    
-background-color: darkorchid;                                                      
-}                                                                                                                                            
+    background-color: rgb(196, 255, 181);
+    font-family: "Halvetica", serif;
+    font-size: 16px;                                                      
+}    
+p {
+    background-color: coral;
+    padding: 10px;
+    margin-top: 20px;
+}                                                                                                                                        
 #info{
-   background-color: LemonChiffton;
+   background-color: rgb(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
  }
  .highlight{
-	 background-color: PapayaWhip
+	 background-color: rgb(255, 000, 000);
 }
 #zoo{
     text-decoration: underline;
+}
+caption {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: aliceblue;
 }

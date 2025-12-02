@@ -3,50 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who wants ice cream</title>
-    <script>"../js/validate.js"</script>
+    <title>Who Wants Ice Cream</title>
+    <script src="../js/validate.js"></script>
 </head>
 <body>
-    <form action= "https://httpbin.org/post" method="post">
-        <input type="text" name="yourname" required>
-        What is your name?
-        <br>
-        
-        <input type="email" name="email" required>
-       What is your email address?    
+    <form action="https://httpbin.org/post" method="post">
+        <label for="yourname">What is your name?</label>
+        <input type="text" id="yourname" name="yourname" required>
         <br>
 
-        <input type="number" name="numberofpeople" required>
-        How many people will you bring with you to the party?  
+        <label for="email">What is your email address?</label>
+        <input type="email" id="email" name="email" required>
         <br>
 
-    <p>What flavor of ice cream do you want?</p>
-        <input type="radio" name="flavor" required>
+        <label for="numberofpeople">How many people will you bring with you to the party?</label>
+        <input type="number" id="numberofpeople" name="numberofpeople" required>
+        <br>
+
+        <p>What flavor of ice cream do you want?</p>
+        <input type="radio" id="vanilla" name="flavor" value="vanilla">
         <label for="vanilla">Vanilla</label>
-        <input type="radio" name="flavor">
+        <input type="radio" id="chocolate" name="flavor" value="chocolate">
         <label for="chocolate">Chocolate Chip</label>
-        <input type="radio" name="flavor">
+        <input type="radio" id="strawberry" name="flavor" value="strawberry">
         <label for="strawberry">Strawberry</label>
-        <input type="radio" name="flavor">
+        <input type="radio" id="other" name="flavor" value="other">
         <label for="other">Other</label>
         <br>
 
-    <p>Which toppings do you like?</p>
-        <input type="checkbox" name="toppings" required>
+        <p>What toppings would you like on your ice cream?</p>
+        <input type="checkbox" id="sprinkles" name="toppings" value="sprinkles" required>
         <label for="sprinkles">Sprinkles</label>
-        <input type="checkbox" name="toppings">
+        <input type="checkbox" id="magicshell" name="toppings" value="magicshell">
         <label for="magicshell">Magic Shell</label>
-        <input type="checkbox" name="toppings">
+        <input type="checkbox" id="chocolatechips" name="toppings" value="chocolatechips">
         <label for="chocolatechips">Chocolate Chips</label>
-        <input type="checkbox" name="toppings">
+        <input type="checkbox" id="gummybears" name="toppings" value="gummybears">
         <label for="gummybears">Gummy Bears</label>
-        <input type="checkbox" name="toppings">
-        <label for="other">Other</label>
+        <input type="checkbox" id="otherTopping" name="toppings" value="other">
+        <label for="otherTopping">Other</label>
         <br>
 
-        <p>What kind of entertainment should we have at the party?</p>
+        <label for="entertainment">What entertainment would you like at your party?</label>
         <select name="entertainment" id="entertainment" required>
-            <option value="ballonanimals">Balloon Animals</option>
+            <option value="balloonanimals">Balloon Animals</option>
             <option value="bouncehouse">Bounce House</option>
             <option value="clown">Clown</option>
             <option value="cornhole">Cornhole</option>
@@ -55,7 +55,6 @@
             <option value="magician">Magician</option>
         </select>
         <br>
-        
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
     </form>

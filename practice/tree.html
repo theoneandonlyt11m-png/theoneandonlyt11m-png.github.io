@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A pretty Tree</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom, lime, purple);
+        height: 100vw;
+       }
+       #container {
+        position: relative;
+        width: 600px;
+        height: 800px;
+        display: block;
+        margin: auto;
+        background-color: white;
+       }
+       #tree{
+        width: 0px;
+        height: 0px;
+        border-bottom: 800 solid green;
+        border-left: 300px solid transparent;
+        border-right: 300px solid transparent;
+       }
+       #box{
+        position: absolute;
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        left: 300px;
+        top: 500px;
+       }
+      </style>
+
+</head>
+<body>
+    <div id="container">
+      <div id="tree"></div>
+      <div id="box"></div>
+    </div>
+</body>
+</html>

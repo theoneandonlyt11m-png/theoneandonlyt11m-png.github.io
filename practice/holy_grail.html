@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail</title>
+    <style>
+        #layout {
+  display: grid;
+  grid:
+    'head head head' 1fr
+    'menu main menu2' 3fr
+    'foot foot foot' 1fr
+    /1fr 3fr 1fr;
+}
+#header {
+  grid-area: head;
+    border: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+
+#main {
+  grid-area: main;
+  padding: 10px;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+#footer {
+  grid-area: foot;
+  padding: 10px;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+#menu {
+  grid-area: menu;
+  padding: 10px;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+#menu2 {
+  grid-area: menu2;
+    padding: 10px; 
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div id="header">Header</div>
+        <div id="main">Main</div>
+        <div id="footer">Footer</div>
+        <div id="menu">Menu</div>
+        <div id="menu2">Menu</div>
+    </div>
+</body>
+</html>

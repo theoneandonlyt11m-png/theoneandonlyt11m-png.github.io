@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clownery</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4140/4140043.png">
+    <style>
+        #layout {
+  display: grid;
+  grid:
+    'head head head' 1fr
+    'menu main menu2' 3fr
+    'foot foot foot' 1fr
+    /1fr 3fr 1fr;
+}
+        #header {
+  grid-area: head;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://legacybox.com/cdn/shop/articles/birthday-slideshow_991x.progressive.jpg?v=1715618293");
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ff1493;
+}
+
+#main {
+  grid-area: main;
+  background-image: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+#footer {
+  grid-area: foot;
+  background-color: rgb(129, 129, 129);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: rgb(0, 0, 0);
+}
+
+#menu {
+  grid-area: menu;
+  background-color: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(0, 0, 0);
+}
+#menu2 {
+  grid-area: menu2;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    size: 100px;
+    color: rgb(0, 0, 0);
+}
+
+button {
+    background-color: #675cf9;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 20px;
+    font-style: bold;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.div1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+.div2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+img {
+    margin: 0%;
+    padding: 0%;
+}
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div id="header">
+            <h1>Clownery</h1>
+        </div>
+        <div id="menu">
+            <h5>Our Clown Pictures</h5>
+            <img src="hq720.jpg" alt="Creep Clown" width="100" height="150">
+            <img src="sprueth_magers_Cindy_Sherman_Untitled__424_2004_17676.jpg" alt="Funny Clown" width="100" height="150">
+            <img src="Prithvi.png" alt="Prithvi Barua" width="100" height="150">
+        </div>
+        <div id="main">
+            <h2>Welcome to the Clownery!</h2>
+            <button>Book a Clown</button>
+            <p>The one and only where you can book any type of clown service.</p>
+            <div class="div1">
+                <p>We provide the following clowns:</p>
+                <ul>
+                    <li>Creep clown</li>
+                    <li>Regular clown</li>
+                    <li>Prithvi Barua</li>
+                    <li>Magican</li>
+                    <li>Funny clown</li>
+                </ul>
+                <p>Our clowns are professional, entertaining, and sure to bring joy to your event!</p>
+        </div>
+        <div id="menu2">
+    </div class="div1">
+        <p>Our  Sponsors</p>
+        </div>
+        <img src="Tim.jpg" alt="Sponsor 1" width="150" height="150">
+        <img src="Baruabathrooms.jpg" alt="Sponsor 2" width="150" height="150">
+        <img src="FrenchAidan.jpg" alt="Sponsor 3" width="150" height="150">
+        <img src="Meyercoffe.jpg" alt="Sponsor 4" width="150" height="150">
+        </div>
+    </div>
+        <div id="footer">
+        <div class="div2">
+            <p>Contact us at:</p>
+            <p>Email: clownery@gmail.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Clown St, Fun City, USA</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

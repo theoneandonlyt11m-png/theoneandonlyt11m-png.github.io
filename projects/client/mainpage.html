@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashionista</title>
     <script src="validate.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <style>
         #layout {
   display: grid;
   grid:
-    'head head head' 1fr
-    'menu main menu2' 6fr     
+    'head head head' 2fr
+    'main main main' 7fr     
     'foot foot foot' 1fr
-    /1fr 4fr 1fr;
+    /1fr 1fr 1fr;
 }
 #header {
   grid-area: head;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
+    background-image: url(images/Untitled.png);
+
 }
 
 #main {
   grid-area: main;
-  background-color: green;
+  background-image: url(images/MainPage.png);
   width: 100%;
   height: 100%;
   text-align: center;
@@ -60,23 +61,67 @@
     font-size: 100px;
     color: white;
 }
-h1 {
-    font-size: 80px;
-    color: black;
-    font-family: 'courier new', courier, monospace;
-    font-weight: bold;
-}
+
     </style>
 </head>
 <body>
     <div id="layout">
         <div id="header">
-            <h1>Fashionista</h1>
-        </div>
-        <div id="main">Main</div>
-        <div id="footer">Footer</div>
-        <div id="menu">Menu</div>
-        <div id="menu2">Menu</div>
+            <h1>Dripsta</h1>
+            <p class="p1">Your Style, Our Passion</p>
+            <button onclick="location.href='about.html'">About Us</button>
+            <hr>
+          </div>
+       <div id="main">
+  <div class="box-container">
+
+    <a href="Carti.html" class="box-link">
+      <div class="box">
+        <img src="images/Thumb-Suprem-Playboi-Carti--1200x675.png" class="img1">
+        <p class="p1">Carti's influence on fashion</p>
+      </div>
+    </a>
+
+    <a href="Kanye.html" class="box-link">
+      <div class="box">
+        <img src="images/https___hypebeast.com_image_2016_09_yeezy-350-v2-closer-look-01.jpg" class="img1">
+      </div>
+    </a>
+    <a href="Rihanna.html" class="box-link">
+      <div class="box3">
+        <img src="images/rihanna-fashion-style-evolution-11.jpg" class="img1">
+        <p class="p1">Rihanna's Bold Fashion Statements</p>
+      </div>
+    </a>
+
+    <a href="Travis.html" class="box-link">
+      <div class="box4">
+        <img src="images/travis-scott-nike-air-trainer-1-high-og-release-date-1.jpg" class="img1">
+        <p class="p1">Travis Scott's Impact on Streetwear</p>
+      </div>
+    </a>
+
+    <a href="Drake.html" class="box-link">
+      <div class="box5">
+        <img src="images/drake-fashion-evolution-1.jpg" class="img1">
+        <p class="p1">Drake's Signature Style Evolution</p>
+      </div>
+    </a>
+
+    <a href="Billie.html" class="box-link">
+      <div class="box6">
+        <img src="images/billie-eilish-style-evolution-1.jpg" class="img1">
+        <p class="p1">Billie Eilish's Unique Fashion Sense</p>
+      </div>
+    </a>
+  </div>
+</div>
+  
+
+  <div id="footer">Footer</div>
+
+        <!-- <div id="menu">Menu</div> -->
+        <!-- <div id="menu2">Menu</div> -->
     </div>
 </body>
 </html>

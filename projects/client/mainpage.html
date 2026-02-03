@@ -15,66 +15,18 @@
     'foot foot foot' 1fr
     /1fr 1fr 1fr;
 }
-#header {
-  grid-area: head;
-    width: 100%;
-    height: 50%;
-    background-image: url(images/Header.png);
-    position: sticky;
-    top: 0px;
-
-}
-
-#main {
-  grid-area: main;
-  background-image: url(images/MainPage.png);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 100px;
-  color: white;
-}
-
-#footer {
-  grid-area: foot;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 100px;
-  color: white;
-}
-
-#menu {
-  grid-area: menu;
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 100px;
-  color: white;
-}
-#menu2 {
-  grid-area: menu2;
-    background-color: green;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 100px;
-    color: white;
-}
 
     </style>
 </head>
 <body>
     <div id="layout">
-        <div id="header">
+    <div class="header">
             <h1>Dripsta</h1>
             <!-- <button onclick="location.href='about.html'">About Us</button> -->
             <!-- <img class="off-white-tape" src="/images/Tape.png" alt="tape"> -->
           </div>
-       <div id="main">
-  <div class="h2box"><h2 class="h2">Everything About Fashion</h2></div>
+        <div class="main">
+  <h2 class="h2">Everything About Fashion</h2>
   <div class="box-container">
     <a href="Carti.html" class="box-link">
       <div class="box">
@@ -85,7 +37,7 @@
 
     <a href="Kanye.html" class="box-link">
       <div class="box2">
-        <img src="images/https___hypebeast.com_image_2016_09_yeezy-350-v2-closer-look-01.jpg" class="img1" alt="Yeezy 350 V2 sneaker">
+        <img src="images/https___hypebeast.com_image_2016_09_yeezy-350-v2-closer-look-01.jpg" class="img1">
         <p class="p1"><q>Yeezy, Yeezy, Yeezy Just Jumped Over Jumpman</q> - Kanye West</p>
       </div>
     </a>
@@ -120,10 +72,36 @@
 </div>
   
 
-  <div id="footer">Footer</div>
+  <div class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Dripsta</h3>
+        <p>Your ultimate fashion destination</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="mainpage.html">Home</a></li>
+          <li><a href="Rihanna.html">Rick Owens</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">TikTok</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dripsta. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
 
-        <!-- <div id="menu">Menu</div> -->
-        <!-- <div id="menu2">Menu</div> -->
+        <!-- <div class="menu">Menu</div> -->
+        <!-- <div class="menu2">Menu</div> -->
     </div>
 </body>
 </html>

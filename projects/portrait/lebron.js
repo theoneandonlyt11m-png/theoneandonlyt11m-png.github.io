@@ -18,13 +18,48 @@ ctx.closePath();
 
 // Draw the eyes
 ctx.beginPath();
-ctx.arc(350, 300, 50, 0, Math.PI * 2);
+ctx.arc(350, 300, 60, 0, Math.PI * 2);
 ctx.fillStyle = "white";
 ctx.fill();
 ctx.closePath();
 
 ctx.beginPath();
-ctx.arc(600, 300, 50, 0, Math.PI * 2);
+ctx.arc(600, 300, 60, 0, Math.PI * 2);
 ctx.fillStyle = "white";
+ctx.fill();
+ctx.closePath();
+
+// Draw the black part of the eyes
+ctx.beginPath();
+ctx.arc(350, 300, 30, 0, Math.PI * 2);
+ctx.fillStyle = "rgb(101, 67, 33)";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(600, 300, 30, 0, Math.PI * 2);
+ctx.fillStyle = "rgb(101, 67, 33)";
+ctx.fill();
+ctx.closePath();
+
+// Draw the pupils
+ctx.beginPath();
+ctx.arc(350, 300, 15, 0, Math.PI * 2);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(600, 300, 15, 0, Math.PI * 2);
+ctx.fillStyle = "black";
+ctx.fill();
+ctx.closePath();
+
+// Draw the nose
+ctx.beginPath();
+ctx.moveTo(475, 350);
+ctx.lineTo(450, 450);
+ctx.lineTo(500, 450);
+ctx.fillStyle = "black";
 ctx.fill();
 ctx.closePath();

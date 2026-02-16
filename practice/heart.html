@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valetine Hearts</title>
+    <style>
+    canvas {
+        border: 1px solid black;
+    }   
+</style>
+</head>
+<body>
+    <canvas id="Canvas" width="800" height="800"></canvas>
+    <script>
+        const canvas = document.getElementById("Canvas");
+        const ctx = canvas.getContext("2d");
+
+       // make a heart shape
+        ctx.fillStyle = "pink";
+        ctx.beginPath();
+        ctx.moveTo(400, 300);
+        ctx.bezierCurveTo(400, 250, 350, 250, 350, 300);
+        ctx.bezierCurveTo(350, 350, 400, 400, 400, 450);
+        ctx.bezierCurveTo(400, 400, 450, 350, 450, 300);
+        ctx.bezierCurveTo(450, 250, 400, 250, 400, 300);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #myCanvas {
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        let x = 1;
+        let x2 = 1
+        let speed = 5;
+        let time = 0;
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillRect(x, 100, 10, 10);
+            ctx.fillRect(x2, 100, 20, 20);
+            time += 1;
+
+            if (time < 170) {
+                x += speed;
+            }
+
+            if (time > 160) {
+                x2 += speed;
+            }
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>

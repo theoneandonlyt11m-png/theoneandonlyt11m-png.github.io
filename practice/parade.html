@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parade</title>
+<style>
+    #myCanvas {
+           border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        //Xs
+        let x = 1;
+        let x2 = 1
+        let x3 = 1;
+        let x4 = 1;
+        let x5 = 1;
+        let x6 = 1;
+        let x7 = 1;
+        let x8 = 1;
+        let x9 = 1;
+        let x10 = 1;
+        let x11 = 1;
+        let x12 = 1;
+        let x13 = 1;
+        let x14 = 1;
+        let speed = 5;
+        let time = 0;
+        let laps = 0; // count of wraps (laps)
+
+        //Ys
+        let y = 100;
+        let y2 = 100;
+        let y3 = 100;
+        let y4 = 100;
+        let y5 = 100;
+        let y6 = 100;
+        let y7 = 100;
+        let y8 = 200;
+        let y9 = 200;
+        let y10 = 200;
+        let y11 = 200;
+        let y12 = 200;
+        let y13 = 200;
+        let y14 = 200;
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#FF6B6B';
+            ctx.fillRect(x, y, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x + 7.5, y - 10, 15, 10);
+            ctx.fillStyle = '#FFD700';
+            ctx.beginPath();
+            ctx.arc(x + 15, y + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#4ECDC4';
+            ctx.fillRect(x3, y2, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x3 + 7.5, y2 - 10, 15, 10);
+            ctx.fillStyle = '#FF1493';
+            ctx.beginPath();
+            ctx.arc(x3 + 15, y2 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#FFE66D';
+            ctx.fillRect(x4, y3, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x4 + 7.5, y3 - 10, 15, 10);
+            ctx.fillStyle = '#00CED1';
+            ctx.beginPath();
+            ctx.arc(x4 + 15, y3 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#95E1D3';
+            ctx.fillRect(x2, y4, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x2 + 7.5, y4 - 10, 15, 10);
+            ctx.fillStyle = '#32CD32';
+            ctx.beginPath();
+            ctx.arc(x2 + 15, y4 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#C7CEEA';
+            ctx.fillRect(x5, y5, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x5 + 7.5, y5 - 10, 15, 10);
+            ctx.fillStyle = '#FF6347';
+            ctx.beginPath();
+            ctx.arc(x5 + 15, y5 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#FF6B6B';
+            ctx.fillRect(x6, y6, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x6 + 7.5, y6 - 10, 15, 10);
+            ctx.fillStyle = '#9370DB';
+            ctx.beginPath();
+            ctx.arc(x6 + 15, y6 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#4ECDC4';
+            ctx.fillRect(x7, y7, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x7 + 7.5, y7 - 10, 15, 10);
+            ctx.fillStyle = '#FF8C00';
+            ctx.beginPath();
+            ctx.arc(x7 + 15, y7 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#F7DC6F';
+            ctx.fillRect(x8, y8, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x8 + 7.5, y8 - 10, 15, 10);
+            ctx.fillStyle = '#1E90FF';
+            ctx.beginPath();
+            ctx.arc(x8 + 15, y8 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#BB8FCE';
+            ctx.fillRect(x9, y9, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x9 + 7.5, y9 - 10, 15, 10);
+            ctx.fillStyle = '#DC143C';
+            ctx.beginPath();
+            ctx.arc(x9 + 15, y9 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#85C1E2';
+            ctx.fillRect(x10, y10, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x10 + 7.5, y10 - 10, 15, 10);
+            ctx.fillStyle = '#FFB6C1';
+            ctx.beginPath();
+            ctx.arc(x10 + 15, y10 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#F8B88B';
+            ctx.fillRect(x11, y11, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x11 + 7.5, y11 - 10, 15, 10);
+            ctx.fillStyle = '#20B2AA';
+            ctx.beginPath();
+            ctx.arc(x11 + 15, y11 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#A8E6CF';
+            ctx.fillRect(x12, y12, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x12 + 7.5, y12 - 10, 15, 10);
+            ctx.fillStyle = '#FF4500';
+            ctx.beginPath();
+            ctx.arc(x12 + 15, y12 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#FFD3B6';
+            ctx.fillRect(x13, y13, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x13 + 7.5, y13 - 10, 15, 10);
+            ctx.fillStyle = '#4169E1';
+            ctx.beginPath();
+            ctx.arc(x13 + 15, y13 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#FFAAA5';
+            ctx.fillRect(x14, y14, 30, 30);
+            ctx.fillStyle = '#d0c299';
+            ctx.fillRect(x14 + 7.5, y14 - 10, 15, 10);
+            ctx.fillStyle = '#00FA9A';
+            ctx.beginPath();
+            ctx.arc(x14 + 15, y14 + 15, 8, 0, Math.PI * 2);
+            ctx.fill();
+            time += 1;
+
+            ctx.fillStyle = '#000000';
+            ctx.font = '20px sans-serif';
+            ctx.fillText('Laps: ' + laps, 10, 30);
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 150);
+            ctx.lineTo(canvas.width, 150);
+            ctx.stroke();       
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 250);
+            ctx.lineTo(canvas.width, 250);
+            ctx.stroke();
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 350);
+            ctx.lineTo(canvas.width, 350);
+            ctx.stroke();
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 450);
+            ctx.lineTo(canvas.width, 450);
+            ctx.stroke();
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 550);
+            ctx.lineTo(canvas.width, 550);
+            ctx.stroke();
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 650);
+            ctx.lineTo(canvas.width, 650);
+            ctx.stroke();
+
+            ctx.fillStyle = '#000000';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(0, 750);
+            ctx.lineTo(canvas.width, 750);
+            ctx.stroke();
+
+           
+
+            
+                if (time > 0) {
+                    x += speed;
+                    if (x > canvas.width) {
+                        x = -30;
+                        y += 100;
+                        if (y > canvas.height) {
+                            y = -30;
+                            laps++;
+                        }
+                    }
+                }
+
+                if (time > 20) {
+                    x2 += speed;
+                    if (x2 > canvas.width) {
+                        x2 = -30;
+                        y2 += 100;
+                        if (y2 > canvas.height) {
+                            y2 = -30;
+                        }
+                    }
+                }
+                if (time > 40) {
+                    x3 += speed;
+                    if (x3 > canvas.width) {
+                        x3 = -30;
+                        y3 += 100;
+                        if (y3 > canvas.height) {
+                            y3 = -30;
+                        }
+                    }
+                }
+    
+                if (time > 60) {
+                    x4 += speed;
+                    if (x4 > canvas.width) {
+                        x4 = -30;
+                        y4 += 100;
+                        if (y4 > canvas.height) {
+                            y4 = -30;
+                        }
+                    }
+                }
+    
+                if (time > 80) {
+                    x5 += speed;
+                    if (x5 > canvas.width) {
+                        x5 = -30;
+                        y5 += 100;
+                        if (y5 > canvas.height) {
+                            y5 = -30;
+                        }
+                    }
+                }
+
+                if (time > 100) {
+                    x6 += speed;
+                    if (x6 > canvas.width) {
+                        x6 = -30;
+                        y6 += 100;
+                        if (y6 > canvas.height) {
+                            y6 = -30;
+                        }
+                    }
+            
+                }
+                if (time > 120) {
+                    x7 += speed;
+                    if (x7 > canvas.width) {
+                        x7 = -30;
+                        y7 += 100;
+                        if (y7 > canvas.height) {
+                            y7 = -30;
+                        }
+                    }
+                }
+
+                if (time > 0) {
+                    x8 += speed;
+                    if (x8 > canvas.width) {
+                        x8 = -30;
+                        y8 += 100;
+                        if (y8 > canvas.height) {
+                            y8 = -30;
+                        }
+                    }
+                }
+
+                if (time > 20) {
+                    x9 += speed;
+                    if (x9 > canvas.width) {
+                        x9 = -30;
+                        y9 += 100;
+                        if (y9 > canvas.height) {
+                            y9 = -30;
+                        }
+                    }
+                }
+            
+                if (time > 40) {
+                    x10 += speed;
+                    if (x10 > canvas.width) {
+                        x10 = -30;
+                        y10 += 100;
+                        if (y10 > canvas.height) {
+                            y10 = -30;
+                        }
+                    }
+                }
+            
+                if (time > 60) {
+                    x11 += speed;
+                    if (x11 > canvas.width) {
+                        x11 = -30;
+                        y11 += 100;
+                        if (y11 > canvas.height) {
+                            y11 = -30;
+                        }
+                    }
+                }
+            
+                if (time > 80) {
+                    x12 += speed;
+                    if (x12 > canvas.width) {
+                        x12 = -30;
+                        y12 += 100;
+                        if (y12 > canvas.height) {
+                            y12 = -30;
+                        }
+                    }
+                }
+
+                if (time > 100) {
+                    x13 += speed;
+                    if (x13 > canvas.width) {
+                        x13 = -30;
+                        y13 += 100;
+                        if (y13 > canvas.height) {
+                            y13 = -30;
+                        }
+                    }
+                }
+
+                if (time > 120) {
+                    x14 += speed;
+                    if (x14 > canvas.width) {
+                        x14 = -30;
+                        y14 += 100;
+                        if (y14 > canvas.height) {
+                            y14 = -30;
+                        }
+                    }
+                }
+                 
+
+            
+
+                
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+    <audio controls autoplay loop>
+  <source src="jean-paul-v-parade-triomphale-song-2-337689.mp3" type="audio/mpeg">
+  
+</audio>
+</body>
+</html>

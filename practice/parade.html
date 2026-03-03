@@ -34,6 +34,7 @@
         let speed = 5;
         let time = 0;
         let laps = 0; // count of wraps (laps)
+        let prevLaps = 0; // track previous lap count to detect increments
 
         //Ys
         let y = 100;
@@ -51,10 +52,51 @@
         let y13 = 200;
         let y14 = 200;
 
+        //color variables
+        let c1 = '#FF6B6B'
+        let c2 = '4ECDC4'
+        let c3 = 'FFE66D'
+        let c4 = '95E1D3'
+        let c5 = '#C7CEEA'
+        let c6 = '#FF6B6B'
+        let c7 = '#4ECDC4'
+        let c8 = '#F7DC6F'
+        let c9 = '#BB8FCE'
+        let c10 = '#85C1E2'
+        let c11 = '#F8B88B'
+        let c12 = '#A8E6CF'
+        let c13 = '#FFD3B6'
+        let c14 = '#FFAAA5'
+        
+        function randomColor() {
+            const hex = Math.floor(Math.random() * 16777215).toString(16);
+            return '#' + hex.padStart(6, '0');
+        }
+
+        function randomizeColors() {
+            c1 = randomColor();
+            c2 = randomColor();
+            c3 = randomColor();
+            c4 = randomColor();
+            c5 = randomColor();
+            c6 = randomColor();
+            c7 = randomColor();
+            c8 = randomColor();
+            c9 = randomColor();
+            c10 = randomColor();
+            c11 = randomColor();
+            c12 = randomColor();
+            c13 = randomColor();
+            c14 = randomColor();
+        }
+        
+
+
+
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            ctx.fillStyle = '#FF6B6B';
+            ctx.fillStyle = c1;
             ctx.fillRect(x, y, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x + 7.5, y - 10, 15, 10);
@@ -63,7 +105,7 @@
             ctx.arc(x + 15, y + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#4ECDC4';
+            ctx.fillStyle = c2;
             ctx.fillRect(x3, y2, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x3 + 7.5, y2 - 10, 15, 10);
@@ -72,7 +114,7 @@
             ctx.arc(x3 + 15, y2 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#FFE66D';
+            ctx.fillStyle = c3;
             ctx.fillRect(x4, y3, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x4 + 7.5, y3 - 10, 15, 10);
@@ -81,7 +123,7 @@
             ctx.arc(x4 + 15, y3 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#95E1D3';
+            ctx.fillStyle = c4;
             ctx.fillRect(x2, y4, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x2 + 7.5, y4 - 10, 15, 10);
@@ -90,7 +132,7 @@
             ctx.arc(x2 + 15, y4 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#C7CEEA';
+            ctx.fillStyle = c5;
             ctx.fillRect(x5, y5, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x5 + 7.5, y5 - 10, 15, 10);
@@ -99,7 +141,7 @@
             ctx.arc(x5 + 15, y5 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#FF6B6B';
+            ctx.fillStyle = c6;
             ctx.fillRect(x6, y6, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x6 + 7.5, y6 - 10, 15, 10);
@@ -108,7 +150,7 @@
             ctx.arc(x6 + 15, y6 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#4ECDC4';
+            ctx.fillStyle = c7;
             ctx.fillRect(x7, y7, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x7 + 7.5, y7 - 10, 15, 10);
@@ -117,7 +159,7 @@
             ctx.arc(x7 + 15, y7 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#F7DC6F';
+            ctx.fillStyle = c8;
             ctx.fillRect(x8, y8, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x8 + 7.5, y8 - 10, 15, 10);
@@ -126,7 +168,7 @@
             ctx.arc(x8 + 15, y8 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#BB8FCE';
+            ctx.fillStyle = c9;
             ctx.fillRect(x9, y9, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x9 + 7.5, y9 - 10, 15, 10);
@@ -135,7 +177,7 @@
             ctx.arc(x9 + 15, y9 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#85C1E2';
+            ctx.fillStyle = c10;
             ctx.fillRect(x10, y10, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x10 + 7.5, y10 - 10, 15, 10);
@@ -144,7 +186,7 @@
             ctx.arc(x10 + 15, y10 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#F8B88B';
+            ctx.fillStyle = c11;
             ctx.fillRect(x11, y11, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x11 + 7.5, y11 - 10, 15, 10);
@@ -153,7 +195,7 @@
             ctx.arc(x11 + 15, y11 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#A8E6CF';
+            ctx.fillStyle = c12;
             ctx.fillRect(x12, y12, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x12 + 7.5, y12 - 10, 15, 10);
@@ -162,7 +204,7 @@
             ctx.arc(x12 + 15, y12 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#FFD3B6';
+            ctx.fillStyle = c13;
             ctx.fillRect(x13, y13, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x13 + 7.5, y13 - 10, 15, 10);
@@ -171,7 +213,7 @@
             ctx.arc(x13 + 15, y13 + 15, 8, 0, Math.PI * 2);
             ctx.fill();
 
-            ctx.fillStyle = '#FFAAA5';
+            ctx.fillStyle = c14;
             ctx.fillRect(x14, y14, 30, 30);
             ctx.fillStyle = '#d0c299';
             ctx.fillRect(x14 + 7.5, y14 - 10, 15, 10);
@@ -181,6 +223,7 @@
             ctx.fill();
             time += 1;
 
+            //lap code and lines 
             ctx.fillStyle = '#000000';
             ctx.font = '20px sans-serif';
             ctx.fillText('Laps: ' + laps, 10, 30);
@@ -234,9 +277,8 @@
             ctx.lineTo(canvas.width, 750);
             ctx.stroke();
 
-           
+             console.log(laps)
 
-            
                 if (time > 0) {
                     x += speed;
                     if (x > canvas.width) {
@@ -394,10 +436,18 @@
 
             
 
-                
+                 
+
+            // If laps increased since last frame, randomize colors once
+            if (laps > prevLaps) {
+                randomizeColors();
+                prevLaps = laps;
+            }
 
             requestAnimationFrame(animate);
         }
+        // initialize random colors then start animation
+        randomizeColors();
         animate();
     </script>
 

@@ -2,9 +2,9 @@ Title -- The Great Hallway Escape
 
 ![layout](/layout.png)
 
-Setting --- The game takes place in Arlington Tech. The player starts in the commons, where students are hanging out between classes. From there, the player can go to different areas of the school such as the main hallway, library, lockers, and Chris’ room. The goal is to find a way to leave the building through the escape door without getting caught.
+Setting --- The game takes place in new building of Arlington Tech. The player starts in the commons, where students are hanging out between classes. From there, the player can go to different areas of the school such as the main hallway, library, lockers, and Chris’ room. The goal is to find a way to leave the building through the escape door without getting caught.
 
-Summory of the Story -- Your name is Tim and you're boring of going to school everyday, so being so fed up of school, you decided to escape. 
+Summory of the Story -- Your name is Tim and you're bored of going to school everyday, so being so fed up of school, you decided to escape. 
 
 Global variables:
 * location - Keeps track of where the player is. 

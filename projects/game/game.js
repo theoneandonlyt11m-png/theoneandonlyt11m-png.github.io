@@ -43,37 +43,65 @@ function Prithvi() {
         "\n\tGo back to commons");
 
     function processInput(input){
-        if (input.toLowerCase() === "ask about the key") {
-            if (hasKey) {
-                print("\nPrithvi says: Ehh, I don't know anything about it... maybe search the building?");
-            } 
-        } else if (input.toLowerCase() === "get an energy drink") {
-            energy += 10;
-            print("\nYou feel more energetic!");
-        } else if (input.toLowerCase() === "go back to commons") {
+        if (input.toLowerCase() == "ask about the key") {
+            print("\nPrithvi says: uhh, ion know bro... maybe look around the building?");
+        } else if (input.toLowerCase() == "get an energy drink") {
+            if (energy == 0) {
+                print("\nYou drink the energy drink and feel a surge of energy.");
+                energy = 1;
+            } else {
+                print("\nYou already have an energy drink, you can't drink another one!");
+            }
+        } else if (input.toLowerCase() == "go back to commons") {
             Commons();
+        } else {
+            stayHere();
+            waitThenCall(Prithvi);
         }
     }
     waitForInput(processInput);
 }
-               
-    waitForInput(processInput);
 
 function mainHallway() {
     clear();
     print("\nYou are in the main hallway!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tGot back to the commons" +
+        "\n\tGo to the Library" +
+        "\n\tGo to Chris's room");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() == "go back to the commons") {
+            Commons();
+        } else if (input.toLowerCase() == "go to the library") {
+            Library();
+        } else if (input.toLowerCase() == "go to chris's room") {
+            ChrisRoom();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(mainHallway);
         }
     }
     waitForInput(processInput);
+}   
+function Library() {
+    clear();
+    print("\nYou are in the library!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\tGo back to the main hallway" +
+        "\n\tSearch for the key");
+
+function processInput(input){
+    if (input.toLowerCase() == "go back to the main hallway") {
+        mainHallway();
+    } else if (input.toLowerCase() == "search for the key") {
+        print("\nYou search the library but there is no key to be found.");
+    } else {
+        stayHere();
+        waitThenCall(Library);
+
+        }
+    }
 }
 
 //finally, make sure you customize this to tell it what should happen at the

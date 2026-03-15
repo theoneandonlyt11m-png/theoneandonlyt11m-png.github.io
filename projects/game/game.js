@@ -18,7 +18,8 @@ function Commons() {
     print("\nYou are in the commons.");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tGo to the table and talk to Prithvi" + 
-        "\n\tMain Hallway");
+        "\n\tMain Hallway" +
+        "\n\tGo to the door");
     
     function processInput(input){
         let choice = input.toLowerCase();
@@ -28,6 +29,13 @@ function Commons() {
             mainHallway();
         } else {
             stayHere();
+            waitThenCall(Commons);
+        }
+        if (choice == "go to the door" && hasKey == true) {
+            print("\nYou use the key to open the door and escape! You win!");
+            waitThenCall(resetGame);
+        } else if (choice == "go to the door" && hasKey == false) {
+            print("\nThe door is locked!");
             waitThenCall(Commons);
         }
     }
@@ -74,9 +82,7 @@ function mainHallway() {
     
     function processInput(input){
         let choice = input.toLowerCase();
-        if (choice === "go back to the commons") {
-            Commons();
-        } else if (choice == "go to the library") {
+         if (choice == "go to the library") {
             Library(); 
         } else if (choice == "go to chris's room") {
             ChrisRoom();
@@ -86,6 +92,12 @@ function mainHallway() {
             Vent();
         } else {
             print("\nYou can't go there. You will get caught skipping!");
+            waitThenCall(mainHallway);
+        }
+        if (choice == "go back to the commons" && hasKey == true) {
+            Commons();
+        } else if (choice == "go back to the commons" && hasKey == false) {
+            print("\nThere is no point in going back there, atleast now...");
             waitThenCall(mainHallway);
         }
     }
@@ -182,13 +194,12 @@ function Vent() {
         if (choice == "go back to the main hallway") {
             mainHallway();
         }  else {
-            print("\nYou can't do that! You either don't have the energy or/and the paperclip to open the vent.");
             stayHere();
             waitThenCall(Vent);
         }
         if (choice == "try to open it and crawl through the vent" && energy == 1 && hasPaperclip == true) {
             print("\nYou open the vent and crawl through it. You find yourself in the security office!");
-            waitThenCall(Vent);
+            waitThenCall(SecurityOffice);
         }
         if (choice == "try to open it and crawl through the vent" && energy == 0 && hasPaperclip == true) {
             print("\nYou open the vent and crawl through it. However, you are too tired and you fall asleep in the vent... You were found the next day and got an into a lot of trouble! Game over.");
@@ -202,6 +213,28 @@ function Vent() {
     
     waitForInput(processInput);
 }
+}
+function SecurityOffice() {
+    clear();
+    print("\nYou are in the security office!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\tGo back to the vent" +
+        "\n\tSearch for the key");
+
+    function processInput(input){
+        let choice = input.toLowerCase();
+        if (choice == "go back to the vent") {
+            Vent();
+        } else if (choice == "search for the key") {
+            print("\nYou search the security office and find the key Now you can open the door!");
+            hasKey = true;
+            waitThenCall(Vent);
+        } else {
+            stayHere();
+            waitThenCall(SecurityOffice);
+        }
+    }
+    waitForInput(processInput);
 }
 
 function start() {

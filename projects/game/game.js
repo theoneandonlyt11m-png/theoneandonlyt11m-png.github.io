@@ -1,5 +1,4 @@
 let gameActive = true; 
-let inventory = [];
 let hasKey = false;
 let hasPass = false;
 let energy = 0;

@@ -5,10 +5,11 @@ let hasPass = false;
 let energy = 0;
 
 function resetGame() {
-    inventory = [];
     hasKey = false;
     hasPass = false;
     energy = 0;
+    classEnd = false;
+    hasPaperclip = false;
     start();
 }
 
@@ -21,9 +22,9 @@ function Commons() {
     
     function processInput(input){
         let choice = input.toLowerCase();
-        if (choice === "go to the table and talk to prithvi") {
+        if (choice == "go to the table and talk to prithvi") {
             Prithvi();
-        } else if (choice === "main hallway") {
+        } else if (choice == "main hallway") {
             mainHallway();
         } else {
             stayHere();
@@ -38,24 +39,21 @@ function Prithvi() {
     print("\nYou are talking to Prithvi!");
     print("\nWhat do you want to do? Say one of these choices:" +
         "\n\tAsk about the key" +
-        "\n\tGet an energy drink" +
-        "\n\tGo back to commons");
+        "\n\tGet an energy drink");
 
     function processInput(input){
         let choice = input.toLowerCase();
-        if (choice === "ask about the key") {
+        if (choice == "ask about the key") {
             print("\nPrithvi says: 'Uhh, ion know bro... maybe look around the building?'");
             waitThenCall(Prithvi);
-        } else if (choice === "get an energy drink") {
-            if (energy === 0) {
+        } else if (choice == "get an energy drink") {
+            if (energy == 0) {
                 print("\nYou drink the energy drink and feel a surge of energy.");
                 energy = 1;
-            } else {
-                print("\nYou already have an energy drink, you can't drink another one!");
-            }
+                } else {
+                    print("\nYou already have an energy drink, you can't drink another one!");
+                }
             waitThenCall(Prithvi);
-        } else if (choice === "go back to commons") {
-            Commons();
         } else {
             stayHere();
             waitThenCall(Prithvi);
@@ -71,25 +69,23 @@ function mainHallway() {
         "\n\tGo back to the commons" +
         "\n\tGo to the Library" +
         "\n\tGo to Chris's room" +
-        "\n\tGo to the teachers' lounge");
+        "\n\tGo to the teachers' lounge" +
+        "\n\tGo up to the vent");
     
     function processInput(input){
         let choice = input.toLowerCase();
         if (choice === "go back to the commons") {
             Commons();
-        } else if (choice === "go to the library") {
+        } else if (choice == "go to the library") {
             Library(); 
-        } else if (choice === "go to chris's room") {
+        } else if (choice == "go to chris's room") {
             ChrisRoom();
-        } else if (choice === "go to the teachers' lounge") {
-            if (hasPass) {
-                TeachersLounge();
-            } else {
-                print("\nYou can't go there. You will get caught skipping!");
-                waitThenCall(mainHallway);
-            }
+        } else if (choice == "go to the teachers' lounge" && hasPass == true) {
+            TeachersLounge();
+        } else if (choice == "go up to the vent" ) {
+            Vent();
         } else {
-            stayHere();
+            print("\nYou can't go there. You will get caught skipping!");
             waitThenCall(mainHallway);
         }
     }
@@ -105,9 +101,9 @@ function Library() {
 
     function processInput(input){
         let choice = input.toLowerCase();
-        if (choice === "go back to the main hallway") {
+        if (choice == "go back to the main hallway") {
             mainHallway();
-        } else if (choice === "search for the key") {
+        } else if (choice == "search for the key") {
             print("\nYou search the library but there is no key to be found.");
             waitThenCall(Library);
         } else {
@@ -123,18 +119,24 @@ function ChrisRoom() {
     print("\nYou came to your first period class, but Chris is in the bathroom.");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tSearch for the key" +
-        "\n\tDo your work");
+        "\n\tDo your work" + 
+        "\n\tFinish the class");
 
     function processInput(input){
         let choice = input.toLowerCase();
-        if (choice === "search for the key") {
+        if (choice == "search for the key") {
             print("\nYou search Chris's room but there is no key to be found.");
             waitThenCall(ChrisRoom);
-        } else if (choice === "do your work") {
-            print("\nYou do your work. Chris comes back and gives you a hall pass! You head back to the hall.");
+        } else if (choice == "do your work") {
+            print("\nYou do your work. Chris comes back and gives you a hall pass! You remember that no one is in the teachers' lounge, you should perhaps go there to find the key!");
             hasPass = true;
             waitThenCall(mainHallway);
+        } else if (choice == "finish the class" && classEnd == true) {
+            print("\nYou finish the class and head back to the main hallway. One the way to the door, you see a giant paperclip on the ground. Could be useful...");
+            hasPaperclip = true;
+            waitThenCall(mainHallway);
         } else {
+            print("\nCan't do that!");
             stayHere();
             waitThenCall(ChrisRoom);
         }
@@ -151,17 +153,55 @@ function TeachersLounge() {
 
     function processInput(input){
         let choice = input.toLowerCase();
-        if (choice === "go back to the main hallway") {
+        if (choice == "go back to the main hallway") {
             mainHallway();
-        } else if (choice === "search for the key") {
+        } else if (choice == "search for the key") {
             print("\nYou got caught searching the teachers' lounge! Game over.");
             waitThenCall(resetGame);
+        } else if (choice == "Text Prithvi for help") {
+            classEnd = true;
+            print("\nYou text Prithvi for help. He tells you that he just heard that the keys were distributed in the security office, but that place is guarded. Is there a way to get there without going through the door? But you need to go back to class anyways.");
+            waitThenCall(mainHallway);
         } else {
             stayHere();
             waitThenCall(TeachersLounge);
         }
     }
     waitForInput(processInput);
+}
+
+function Vent() {
+    clear();
+    print("\nYou went up to the vent!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\tGo back to the main hallway" +
+        "\n\tTry to open it and crawl through the vent");
+
+    function processInput(input){
+        let choice = input.toLowerCase();
+        if (choice == "go back to the main hallway") {
+            mainHallway();
+        }  else {
+            print("\nYou can't do that! You either don't have the energy or/and the paperclip to open the vent.");
+            stayHere();
+            waitThenCall(Vent);
+        }
+        if (choice == "try to open it and crawl through the vent" && energy == 1 && hasPaperclip == true) {
+            print("\nYou open the vent and crawl through it. You find yourself in the security office!");
+            waitThenCall(Vent);
+        }
+        if (choice == "try to open it and crawl through the vent" && energy == 0 && hasPaperclip == true) {
+            print("\nYou open the vent and crawl through it. However, you are too tired and you fall asleep in the vent... You were found the next day and got an into a lot of trouble! Game over.");
+            waitThenCall(resetGame);
+        }
+        if (choice == "try to open it and crawl through the vent" && energy == 1 && hasPaperclip == false) {
+            print("\nYou try to open the vent, but you don't have anything to pry it open with! You can't get through the vent.");
+            stayHere();
+            waitThenCall(Vent);
+        }
+    
+    waitForInput(processInput);
+}
 }
 
 function start() {

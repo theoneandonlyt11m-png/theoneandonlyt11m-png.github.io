@@ -1,4 +1,3 @@
-let gameActive = true; 
 let hasKey = false;
 let hasPass = false;
 let energy = 0;

@@ -3,6 +3,7 @@ let hasPass = false;
 let energy = 0;
 let classEnd = false;
 let hasPaperclip = false;
+gameActive = true;
 
 function resetGame() {
     hasKey = false;

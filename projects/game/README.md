@@ -6,7 +6,7 @@
 The game takes place in the new building of Arlington Tech. The player starts in the commons, where students are hanging out between classes. From there, the player can go to different areas of the school such as the main hallway, library, lockers, and Chris’ room. The goal is to find a way to leave the building through the escape door without getting caught.
 
 ## Summory of the Story 
-// Your name is Tim and you're bored of going to school everyday, so being so fed up of school, you decided to escape. 
+Your name is Tim and you're bored of going to school everyday, so being so fed up of school, you decided to escape. 
 
 ## Global variables:
 * hasPaperClip - Keeps the track of whether the player has found the key or not. IT allows the player to open the vent.

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>Aidans Portait</title>
+		<script src="../../js/validate.js"></script>
+        </head>
+        <body>
+		<canvas id="canvas" width="800" height="800">
+			<script>
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+
+				//Background
+				ctx.fillStyle = "#e6f5e6";
+				ctx.fillRect(0,0,800,800)
+
+				//Hair
+				ctx.fillStyle = "#633400";
+				ctx.beginPath();
+				ctx.ellipse(400,250,170,200,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Basic Face Shape
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(400,300,170,200,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Right Ear
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(240,285,50,75,0,0,2*Math.PI);
+				ctx.fill();
+
+				//left ear
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(560,285,50,75,0,0,2*Math.PI);
+				ctx.fill()
+
+				//Nose
+				ctx.strokeStyle = "#000000";
+				ctx.lineWidth=3;
+				ctx.beginPath();
+				ctx.moveTo(400,275);
+				ctx.lineTo(375,350);
+				ctx.lineTo(425,350);
+				ctx.stroke();
+
+				//Left Eye
+				ctx.fillStyle = "#ffffff";
+				ctx.strokeStyle = "#000000";
+				ctx.lineWidth=2;
+				ctx.beginPath();
+				ctx.ellipse(315,250,40,25,0,0,2*Math.PI);
+				ctx.stroke();
+				ctx.fill();
+
+				//Iris
+				ctx.fillStyle = "#7B5000";
+				ctx.beginPath();
+				ctx.ellipse(315,250,25,25,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Pupil
+				ctx.fillStyle = "#000000";
+				ctx.beginPath();
+				ctx.ellipse(315,250,10,10,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Right Eye
+				ctx.fillStyle = "#ffffff";
+				ctx.strokeStyle = "#000000";
+				ctx.lineWidth=2;
+				ctx.beginPath();
+				ctx.ellipse(485,250,40,25,0,0,2*Math.PI);
+				ctx.stroke();
+				ctx.fill();
+
+				//Iris
+				ctx.fillStyle = "#7B5000";
+				ctx.beginPath();
+				ctx.ellipse(485,250,25,25,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Pupil
+				ctx.fillStyle = "#000000";
+				ctx.beginPath();
+				ctx.ellipse(485,250,10,10,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Mouth
+				ctx.strokeStyle = "#FF8490";
+				ctx.lineWidth=4;
+				ctx.beginPath();
+				ctx.arc(400,400,50,0,1*Math.PI);
+				ctx.stroke();
+
+				//Neck
+				ctx.fillStyle = "#f5dfab";
+				ctx.fillRect(325,459,150,300)
+
+				//Shirt
+				ctx.fillStyle = "#474747";
+				ctx.beginPath();
+				ctx.ellipse(400,800,350,200,0,0,2*Math.PI);
+				ctx.fill();
+
+				//Fingers
+				ctx.strokeStyle = "#000000";
+				ctx.lineWidth=1;
+				ctx.strokeStyle = "#000000";
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(610,300,25,50,Math.PI/-8,0,2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+	
+				ctx.strokeStyle = "#000000";
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(640,285,25,50,0,0,2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+
+				ctx.strokeStyle = "#000000";	
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(660,285,25,50,0,0,2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+
+				ctx.strokeStyle = "#000000";
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(680,285,25,50,0,0,2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+
+				ctx.fillStyle = "#f5dfab";
+				ctx.beginPath();
+				ctx.ellipse(710,285,25,50,0,0,2*Math.PI);
+				ctx.fill();
+				ctx.stroke();
+
+				//Arm
+				ctx.fillStyle = "#f5dfab";                 
+				ctx.fillRect(605,300,130,300)
+
+				//Sleeve
+				ctx.fillStyle = "#474747";
+				ctx.fillRect(600,500,140,300);
+				</script>
+		</canvas>
+        </body>
+	</html>

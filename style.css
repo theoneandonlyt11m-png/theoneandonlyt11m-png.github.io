@@ -46,3 +46,33 @@ body {
             cursor: pointer;
         }
      
+        #my-name {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            font-size: 70px;
+            color: #000000;
+        }
+
+        #desc {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+            font-size: 35px;
+            color: #000000;
+            width: 100%;
+        }
+
+        #desc-box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 12px;
+            padding: 150px 300px;
+            text-align: center;
+            width: auto;
+            display: none;
+        }

@@ -1,4 +1,6 @@
 let pic = false;
+let pic2 = false;
+let pic3 = false;
 
 function ViewProjects() {
     
@@ -38,6 +40,40 @@ function ViewProjects() {
     document.getElementById("project-two-desc").textContent = "A simple 2D car game where the player drives increasingly faster while doging cars going at diffrent speeds. The score  increases as time goes on (like chrome dino game)";
     document.getElementById("project-two-link").innerHTML = "<a href=\"https://gracehoppercenter.github.io/ict/s26/courses/itd210/projects/game/Home_Commute/\" target=\"_blank\" rel=\"noopener\">Open project</a>";
     document.getElementById("project-two-box").style.display = "block";
+
+    // insert project images to the left of each project (JS-only, non-invasive)
+    if (pic2 === false) {
+        const img1 = new Image();
+        pic2 = true;
+        img1.id = 'project-one-pic';
+        img1.src = 'images/game1.png';
+        img1.alt = 'Game 1';
+        img1.style.width = '220px';
+        img1.style.height = '160px';
+        img1.style.objectFit = 'cover';
+        img1.style.marginRight = '20px';
+        img1.style.cssFloat = 'left';
+        img1.style.borderRadius = '8px';
+        const box1 = document.getElementById('project-one-box');
+        if (box1) box1.insertBefore(img1, box1.firstChild);
+    }
+
+    if (pic3 === false) {
+        const img2 = new Image();
+        pic3 = true;
+        img2.id = 'project-two-pic';
+        img2.src = 'images/game2.png';
+        img2.alt = 'Game 2';
+        img2.style.width = '220px';
+        img2.style.height = '160px';
+        img2.style.objectFit = 'cover';
+        img2.style.marginRight = '20px';
+        img2.style.cssFloat = 'left';
+        img2.style.borderRadius = '8px';
+        const box2 = document.getElementById('project-two-box');
+        if (box2) box2.insertBefore(img2, box2.firstChild);
+    }
+
 }
 
 function ViewAbout() {

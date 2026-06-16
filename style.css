@@ -256,7 +256,7 @@ body {
         #project-one-box {
             position: absolute;
             top: 50%;
-            left: 70%;
+            left: 50%;
             transform: translate(-50%, -50%);
             background: #ffffff;
             border: 1px solid #cccccc;
@@ -265,7 +265,7 @@ body {
             padding: 12px 24px;
             text-align: center;
             width: 610px;
-            height: 300px;
+            height: 400px;
             display: none;
         }
         #project-one-link, #project-two-link {
@@ -278,7 +278,7 @@ body {
         #project-two-box {
             position: absolute;
             top: 90%;
-            left: 70%;
+            left: 50%;
             transform: translate(-50%, -50%);
             background: #ffffff;
             border: 1px solid #cccccc;
@@ -287,7 +287,7 @@ body {
             padding: 12px 24px;
             text-align: center;
             width: 610px;
-            height: 250px;
+            height: 270px;
             display: none;
         }
 

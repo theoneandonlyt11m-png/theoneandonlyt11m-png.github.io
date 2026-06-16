@@ -3,6 +3,8 @@ body {
             min-height: 100vh;
             background: #f5f5f5;
             position: relative;
+            background-color: #66fe2e;;
+            background-size: cover;
         }
         .box {
             position: absolute;
@@ -10,6 +12,7 @@ body {
             left: 20px;
             right: 20px;
             background: #ffffff;
+            opacity: 1;
             border: 1px solid #cccccc;
             border-radius: 12px;
             padding: 24px 28px;
@@ -45,6 +48,40 @@ body {
             border-radius: 8px;
             cursor: pointer;
         }
+
+        .github-button {
+             padding: 12px 24px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #000000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #contact-box {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            padding: 12px 16px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-item {
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .contact-item strong {
+            color: #111111;
+        }
      
         #my-name {
             position: absolute;
@@ -71,6 +108,7 @@ body {
             background: #ffffff;
             border: 1px solid #cccccc;
             border-radius: 12px;
+            opacity: 1;
             padding: 150px 300px;
             text-align: center;
             width: auto;
@@ -85,4 +123,132 @@ body {
             font-size: 25px;
             color: #7d7d7d;
         }
+
+        #Skills {
+            position: absolute;
+            top: 85%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: #000000;
+        }
         
+        #html {
+            position: absolute;
+            top: 95%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            color: #000000;
+        }
+
+        .html-word {
+            font-weight: 700;
+            color: orange;
+        }
+
+        .css-word {
+            font-weight: 700;
+            color: blue;
+        }
+
+        .js-word {
+            font-weight: 700;
+            color: rgb(177, 177, 36);
+        }
+
+        .python-word {
+            font-weight: 700;
+            color: green;
+        }
+
+        #css {
+            position: absolute;
+            top: 110%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            color: #000000;
+        }
+
+        #js {
+            position: absolute;
+            top: 125%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            color: #000000;
+        }
+
+        #python {
+            position: absolute;
+            top: 140%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            color: #000000;
+        }
+
+        #html-box {
+            position: absolute;
+            top: 95%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 12px;
+            opacity: 1;
+            padding: 12px 24px;
+            text-align: center;
+            width: 610px;
+            height: 110px;
+            display: none;
+        }
+
+        #css-box {
+            position: absolute;
+            top: 110%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 12px;
+            opacity: 1;
+            padding: 12px 24px;
+            text-align: center;
+            width: 610px;
+            height: 105px;
+            display: none;
+        }
+
+        #js-box {
+            position: absolute;
+            top: 125%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 12px;
+            opacity: 1;
+            padding: 12px 24px;
+            text-align: center;
+            width: 610px;
+            height: 120px;
+            display: none;
+        }
+
+        #python-box {
+            position: absolute;
+            top: 140%;
+            left: 66%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 12px;
+            opacity: 1;
+            padding: 12px 24px;
+            text-align: center;
+            width: 610px;
+            height: 100px;
+            display: none;
+        }

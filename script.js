@@ -44,14 +44,8 @@ function ViewProjects() {
         img1.id = 'project-one-pic';
         img1.src = 'images/game1.png';
         img1.alt = 'Game 1';
-        img1.style.width = '220px';
-        img1.style.height = '160px';
-        img1.style.objectFit = 'cover';
-        img1.style.marginRight = '20px';
-        img1.style.cssFloat = 'left';
-        img1.style.borderRadius = '8px';
         const box1 = document.getElementById('project-one-box');
-        if (box1) box1.insertBefore(img1, box1.firstChild);
+        if (box1) box1.insertBefore(img1, document.getElementById('project-one-desc'));
     }
 
     if (pic3 === false) {
@@ -60,14 +54,8 @@ function ViewProjects() {
         img2.id = 'project-two-pic';
         img2.src = 'images/game2.png';
         img2.alt = 'Game 2';
-        img2.style.width = '220px';
-        img2.style.height = '160px';
-        img2.style.objectFit = 'cover';
-        img2.style.marginRight = '20px';
-        img2.style.cssFloat = 'left';
-        img2.style.borderRadius = '8px';
         const box2 = document.getElementById('project-two-box');
-        if (box2) box2.insertBefore(img2, box2.firstChild);
+        if (box2) box2.insertBefore(img2, document.getElementById('project-two-desc'));
     }
 }
 
@@ -114,12 +102,7 @@ function ViewAbout() {
         img.id = 'my-profile-pic'; 
         img.src = 'images/mypic.png';
         img.alt = 'My Picture';
-        img.style.width = '450px';
-        img.style.height = '600px';
-        img.style.marginTop = '300px';
-        img.style.marginLeft = '300px';
-        img.style.borderRadius = '10px';
-        document.body.appendChild(img);
+        document.getElementById('desc-box').after(img);
     } else {
         console.log("Picture already exists");
     }
